@@ -9,7 +9,7 @@ function Book() {
     const [clicked, setClicked] = useState();
     const [ticket, setTicket] = useState({
         name: "Parking Ticket",
-        ticketPrice: price * 50,
+        ticketPrice: (price * 50)/100,
     })
     const handleSubmit = event => {
         event.preventDefault();
@@ -62,7 +62,7 @@ function Book() {
         setPrice(event.target.value)
         console.log(price);
         setTicket({
-            ticketPrice: event.target.value * 50
+            ticketPrice: (event.target.value * 50)/100
         })
     }
 
@@ -70,6 +70,7 @@ function Book() {
         <div className="App">
             <div>
                 <h1 id="heading" >Book Your Parking</h1>
+                <h3>Z Square Mall Parking</h3>
                 {/* <h2>How many hours?</h2> */}
                 <div class="row">
                     <div class="col s12">
@@ -81,15 +82,15 @@ function Book() {
                         </div>
                     </div>
                 </div>
-                <h2>Select the slot you would like</h2>
-                <p>It will cost you {ticket.ticketPrice}</p>
+                <h4>Select the spot here</h4>
+                <p>It will cost you $ {ticket.ticketPrice}</p>
                 <div class="row">
                     <div id="A1" class="col s1 offset-s4">
                         <StripeCheckOut
                             stripeKey={process.env.REACT_APP_KEY}
                             token={makePayment}
                             name="Buy Ticket"
-                            amount={price * 50}
+                            amount={(price * 50)}
                         >
                             <button id="1" onClick={setClick} disabled={parked[1]} className="btn-large blue">A1</button>
                         </StripeCheckOut>
@@ -99,7 +100,7 @@ function Book() {
                             stripeKey={process.env.REACT_APP_KEY}
                             token={makePayment}
                             name="Buy Ticket"
-                            amount={price * 50}
+                            amount={(price * 50)}
                         >
                             <button id="2" onClick={setClick} disabled={parked[2]} className="btn-large blue">A2</button>
                         </StripeCheckOut>
@@ -109,7 +110,7 @@ function Book() {
                             stripeKey={process.env.REACT_APP_KEY}
                             token={makePayment}
                             name="Buy Ticket"
-                            amount={price * 50}
+                            amount={(price * 50)}
                         >
                             <button id="3" onClick={setClick} disabled={parked[3]} className="btn-large blue">A3</button>
                         </StripeCheckOut>
@@ -119,7 +120,7 @@ function Book() {
                             stripeKey={process.env.REACT_APP_KEY}
                             token={makePayment}
                             name="Buy Ticket"
-                            amount={price * 50}
+                            amount={(price * 50)}
                         >
                             <button id="4" onClick={setClick} disabled={parked[4]} className="btn-large blue">A4</button>
                         </StripeCheckOut>
@@ -134,7 +135,7 @@ function Book() {
                             stripeKey={process.env.REACT_APP_KEY}
                             token={makePayment}
                             name="Buy Ticket"
-                            amount={price * 50}
+                            amount={(price * 50)}
                         >
                             <button id="5" onClick={setClick} disabled={parked[5]} className="btn-large blue">B1</button>
                         </StripeCheckOut>
@@ -144,7 +145,7 @@ function Book() {
                             stripeKey={process.env.REACT_APP_KEY}
                             token={makePayment}
                             name="Buy Ticket"
-                            amount={price * 50}
+                            amount={(price * 50)}
                         >
                             <button id="6" onClick={setClick} disabled={parked[6]} className="btn-large blue">B2</button>
                         </StripeCheckOut>
@@ -163,7 +164,7 @@ function Book() {
                             stripeKey={process.env.REACT_APP_KEY}
                             token={makePayment}
                             name="Buy Ticket"
-                            amount={price * 50}
+                            amount={(price * 50)}
                         >
                             <button id="7" onClick={setClick} disabled={parked[7]} className="btn-large blue">B3</button>
                         </StripeCheckOut>
@@ -173,7 +174,7 @@ function Book() {
                             stripeKey={process.env.REACT_APP_KEY}
                             token={makePayment}
                             name="Buy Ticket"
-                            amount={price * 50}
+                            amount={(price * 50)}
                         >
                             <button id="8" onClick={setClick} disabled={parked[8]} className="btn-large blue">B4</button>
                         </StripeCheckOut>
@@ -189,7 +190,7 @@ function Book() {
                             stripeKey={process.env.REACT_APP_KEY}
                             token={makePayment}
                             name="Buy Ticket"
-                            amount={price * 50}
+                            amount={(price * 50)}
                         >
                             <button id="9" onClick={setClick} disabled={parked[9]} className="btn-large blue">C1</button>
                         </StripeCheckOut>
@@ -199,7 +200,7 @@ function Book() {
                             stripeKey={process.env.REACT_APP_KEY}
                             token={makePayment}
                             name="Buy Ticket"
-                            amount={price * 50}
+                            amount={(price * 50)}
                         >
                             <button id="10" onClick={setClick} disabled={parked[10]} className="btn-large blue">C2</button>
                         </StripeCheckOut>
@@ -209,7 +210,7 @@ function Book() {
                             stripeKey={process.env.REACT_APP_KEY}
                             token={makePayment}
                             name="Buy Ticket"
-                            amount={price * 50}
+                            amount={(price * 50)}
                         >
                             <button id="11" onClick={setClick} disabled={parked[11]} className="btn-large blue">C3</button>
                         </StripeCheckOut>
@@ -219,7 +220,7 @@ function Book() {
                             stripeKey={process.env.REACT_APP_KEY}
                             token={makePayment}
                             name="Buy Ticket"
-                            amount={price * 50}
+                            amount={(price * 50)}
                         >
                             <button id="12" onClick={setClick} disabled={parked[12]} className="btn-large blue">C4</button>
                         </StripeCheckOut>

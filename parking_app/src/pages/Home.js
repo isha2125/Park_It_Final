@@ -8,8 +8,6 @@ import { Button } from 'reactstrap';
 class Home extends Component {
     state = {
         img: asset
-
-
     };
     render() {
         return (
@@ -17,7 +15,6 @@ class Home extends Component {
                 <div class="vertical-menu">
                     <a href="#" class="active">• Home</a>
                     <a href="/book">• Let's Park</a>
-                    <a href="/book">• Tickets</a>
                     <a href="/about">• Know More</a>
                 </div>
                 <div style={{ display: "grid", gridTemplateColumns: "repeat(2, 1fr)", gridGap: 20, alignItems: 'center' }}>
