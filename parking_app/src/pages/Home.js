@@ -14,7 +14,7 @@ class Home extends Component {
             <div className='main' >
                 <div class="vertical-menu">
                     <a href="#" class="active">• Home</a>
-                    <a href="/book">• Let's Park</a>
+                    <a href="/Book">• Let's Park</a>
                     <a href="/copyright">• Know More</a>
                 </div>
                 <div style={{ display: "grid", gridTemplateColumns: "repeat(2, 1fr)", gridGap: 20, alignItems: 'center' }}>
